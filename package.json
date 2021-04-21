@@ -5,8 +5,10 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "dev": "nodemon index.js",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false && npm install && cd  front-end && npm run build --prefix front-end"
+    "server": "nodemon index.js",
+    "client": "npm run start --prefix front-end",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix front-end && npm run build --prefix front-end"
   },
   "keywords": [],
   "author": "",
