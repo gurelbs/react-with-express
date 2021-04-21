@@ -24,5 +24,5 @@ app.post('/api/create', (req,res) => {
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname,'front-end/build/index.html'));
   });
-const PORT = 5000 || process.env.PORT
-app.listen(PORT,() => console.log(`server run at http://localhost:${PORT}`))
+const PORT = process.env.PORT || 5000
+app.listen( PORT,() => console.log(`server run at http://localhost:${PORT}`))

@@ -1,5 +1,5 @@
 import React,{useEffect, useState} from 'react'
-import {api} from './api/api'
+import api from './api/api'
 export default function App() {
   const [users, setUsers] = useState({name: 'my name is gurel. what`s your?'})
   const [name, setName] = useState('')
